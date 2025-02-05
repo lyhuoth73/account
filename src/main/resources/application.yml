@@ -1,0 +1,27 @@
+spring:
+  profiles:
+    active: local
+  cassandra:
+    port: 8080
+  datasource:
+    hikari:
+      connection-timeout: 10000
+      keepalive-time: 600000
+      idle-timeout: 1200000
+      initialization-fail-timeout: 10000
+      max-lifetime: 3600000
+      maximum-pool-size: 10000
+      minimum-idle: 10
+      pool-name: ConnectionPool
+      register-mbeans: false
+      validation-timeout: 5000
+  jpa:
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+#spring.datasource.driver-class-name=org.postgresql.Driver
+#spring.datasource.url=jdbc:postgresql://localhost:5433/account
+#spring.datasource.username=postgres
+#spring.datasource.password=123456
+#spring.jpa.hibernate.ddl-auto=update
+#spring.jpa.properties.hibernate.dialect=org.hibernate.dialect.PostgreSQLDialect
